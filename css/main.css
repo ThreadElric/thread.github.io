@@ -1,9 +1,36 @@
+/*
+* Font size : 14px
+*
+* Classiques mesures : 4 8 12 24px;
+*
+*
+*
+*/
+
 body{
-  background-color: #1abc9c;
+  font-size: 14px;
 }
 
-h1{
-  text-align: center;
-  font-size: 15em;
-  color: #333;
+.header{
+  background-color: #fefefe;
+  border-bottom: 1px solid #666;
+  padding: 1.7em;
+}
+
+.title{
+  font-size: 1.2em;
+  margin: 24px;
+}
+
+.card{
+  border-radius: 3px;
+  border: 1px solid #666;
+
+  display: inline-block;
+  box-sizing: border-box;
+
+  height: 500px ;
+  width: 200px;
+
+  padding: 1em;
 }
