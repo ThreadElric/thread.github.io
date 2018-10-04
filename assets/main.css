@@ -74,9 +74,8 @@ body {
     height: 50px;
     width: 50px;
     
-    float: left;
     margin: 0 0.5em;
-
+    
     object-fit: cover;
     
     filter: grayscale(1);
@@ -141,12 +140,6 @@ body {
     margin: 0 1em;
 }
 
-main::after{
-    clear: both;
-    display: block;
-    content: "";
-}
-
 @media only screen and (max-width:480px){
     .navigation{
         flex-wrap: wrap;
@@ -174,16 +167,12 @@ main::after{
 /* large */
 
 @media only screen and (min-width:720px){
+    main {
+        display: flex;
+    }
     .me, .experiences{
         margin: 0 1%;
-    }
-    .me {
-        float: left;
-        width: 48%;
+        flex-basis: 50%;
     }
 
-    .experiences {
-        float: left;
-        width: 48%;
-    }
 }
