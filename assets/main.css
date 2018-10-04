@@ -1,5 +1,5 @@
 /* reset */
-html{
+html {
     box-sizing: border-box;
 }
 
@@ -28,28 +28,25 @@ body {
     background-color: hsl( 0, 0%, 100%);
     padding: 1em;
     border: 0;
-    /*border-radius: 3px;*/
-    /*box-shadow: 0px 2px 4px 0px hsla(0, 0%, 0%, 0.2);*/
-    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
-.paper.full-width{
+.paper + .paper {
+    border-top: 1px solid #eee;
+}
+
+.paper.full-width {
     margin: 0;
     border-radius: 0;
 }
 
-.paper.dark{
+.paper.dark {
     background-color: hsl(0, 0%, 89%);
     border: 1px solid #eee;
 }
 
-.paper::after{
-    content: "";
-    clear: both;
-    display: block;
-}
-
-.paper .header{
+.paper .header {
     color: hsl(0, 0%, 13%);
     font-size: 0.9em;
     font-weight: bold;
@@ -57,64 +54,56 @@ body {
     letter-spacing: 0.1em;
 }
 
+.paper .header .date {
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 80%);
+    padding: 0.2em 0.5em;
+    font-size: 0.8em;
+    text-transform: uppercase;
+}
+
 .paper .description {
     line-height: 1.5;
-    color: hsl(0, 0%, 29%);
+    color: hsl(0, 0%, 49%);
+    display: block;
 }
 
 .paper .image {
-    /*background-color: hsl(240, 90%, 100%);*/
-    
-    border: none;
     border-radius: 10% 25%;
     
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     
     float: left;
-    margin: auto 0.5em 0 0em;
-
-    text-align: center;
-    line-height: 2;
+    margin: 0 0.5em;
 
     object-fit: cover;
     
     filter: grayscale(1);
-    
-    display: block;
-    position: relative;
 }
 
-.paper .image::before {
-    content: attr(data-placeholder) "";
-    color: #000;
-    background-color: #fff;
-    border-width: 0;
-    border-radius: 8px;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
-.paper .link{
-    color: hsl(240, 55%, 55%);
+.paper .link {
+    color: hsl(19, 94%, 39%);
     text-decoration: none;
-    display: block;
+    /*display: block;*/
 }
 
-.paper .link::before{
+.paper .link::before {
     content: attr(data-icon);
     text-transform: bold;
     font-size: 0.9;
-    color: hsl(240, 55%, 65%);
+    color: hsl(19, 93%, 39%);
 }
 
+.paper .details {
+    font-size: 0.9em;
+}
+
+
+/* NAVIGATION */
 .navigation {
     display: flex;
     margin: 0 1em;
-
     color: hsl(0, 0%, 50%);
 }
 
@@ -135,7 +124,9 @@ body {
     text-decoration: none;
 }
 
-.navigation .item:hover{
+.navigation .item:hover, 
+.navigation .item.selected,
+.navigation .item:target{
     color: hsl(0, 0%, 35%);
     border-bottom: 2px solid #000;
 }
@@ -144,6 +135,11 @@ body {
     margin-left: auto;
 }
 
+/* END NAVIGATION */
+
+.list {
+    margin: 0 1em;
+}
 
 main::after{
     clear: both;

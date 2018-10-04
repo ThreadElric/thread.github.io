@@ -11,7 +11,7 @@
 				<li class="item">
 					<a class="link" href="/">Fred</a>
 				</li>
-				<li class="item right">
+				<!-- <li class="item right">
 					<a class="link" href="/devs">
 						Devs
 					</a>				
@@ -19,59 +19,83 @@
 					<a class="link" href="/photos">Photos</a>
 				</li>
 				<li class="item">
-					<a class="link" href="/about">About</a>
+					<a class="link" href="/">About</a>
 				</li>
+				-->
 			</ul>	
 		</nav>
-	<main>
-		<div class="me">
-			<section class="paper">
-				<!-- <img 
-					class="image" 
-					src="assets/me.jpeg"
-					data-placeholder="A"
-				/> -->
-				<h1 class="header">Fred</h1>
-				<span class="description">Coffee, running and coffee.</span>
-				<a href="https://github.com/ThreadElric" class="link" data-icon="@">threadelric</a>
-			</section>
-		</div>
-		<div class="experiences">
-			<section class="paper">
-				<h2 class="header"> 
-					Withings <span class="date">2017-Now</span>
-				</h2>
-				<p class="description">
-					Dev FullStack
-				</p>
-				<p>
-					Backend Tool
-				</p>			
-			</section>
-			<section class="paper">
-				<h2 class="header"> 
-					Pertimm <span class="date">2013-2016</span>
-				</h2>
-				<p class="description">
-					Dev FullStack
-				</p>
-				<p>
-					Backend
-				</p>			
-			</section>
-			<section class="paper">
-				<h2 class="header"> 
-					ILObjects <span class="date">2007-2013</span>
-				</h2>
-				<p class="description">
-					Dev FullStack
-				</p>
-				<p>
-					All
-				</p>			
-			</section>
-		</div>
-	</main>
-
+		<main>
+			<div class="me">
+				<section class="paper">
+					<img 
+						class="image" 
+						src="assets/me.jpeg"
+						data-placeholder="A"
+					/>
+					<div>
+						<h1 class="header">Fred</h1>
+						<p class="description">Coffee, running and coffee.</p>
+						<a href="https://github.com/ThreadElric" class="link" data-icon="@">threadelric</a>
+					</div>
+				</section>
+			</div>
+			<div class="experiences">
+				<section class="paper">
+					<div>
+						<h2 class="header"> 
+							Withings <span class="date">2017-Now</span>
+						</h2>
+						<span class="description">
+							Dev FullStack
+						</span>
+						<div class="details">
+							Migration de l&apos;outil interne en PHP/Slim vers une architecture JS
+							<div>
+								<u>R&eacute;alisations :</u>
+								<ul class="list">
+									<li>Ajouts fonctionnels des interfaces existantes (PHP, Backbone/Marionnette)</li>
+									<li>Nouvelle architecture JS avec React/Redux pour le front-end et la gestion de l&apos;&eacute;tat de l&apos;application. Webpack pour l&apos;asset pipeline</li>
+								</ul>
+							</div>
+						</div>		
+					</div>	
+				</section>
+				<section class="paper">
+					<div>
+						<h2 class="header"> 
+							Pertimm <span class="date">2013-2016</span>
+						</h2>
+						<p class="description">
+							Dev FullStack
+						</p>
+						<div class="details">
+							Evolutions fonctionnelles du back-office pour un moteur de recherche e-Commerce et customisations client.
+							<div>
+								<u>R&eacute;alisations</u>:
+								<ul class="list">
+									<li>Constitution ou am&eacute;lioration des interfaces du back-office et des d&eacute;monstrateurs (PHP, Ruby on Rails)</li>
+									<li>Simplification des proc&eacute;dures de livraison et de la solution (Ruby, Bash, Jenkins, Docker)</li>
+								</ul>
+								Int&eacute;gration dans une organisation SCRUM avec it&eacute;rations de deux semaines.
+							</div>
+						</div>	
+					</div>		
+				</section>
+				<section class="paper">
+					<div>
+						<h2 class="header"> 
+							ILObjects <span class="date">2007-2013</span>
+						</h2>
+						<p class="description">
+							Dev FullStack
+						</p>
+						<div class="details">
+							D&eacute;veloppement d&apos;un site e-Commerce : librairie en ligne
+							Sp&eacute;cifications des interfaces web et mobile d&eacute;di&eacute;es &agrave; la recherche dans un catalogue de livres num&eacute;rique.
+						</div>
+					</div>		
+				</section>
+			</div>
+		</main>
 	</body>
 </html>
