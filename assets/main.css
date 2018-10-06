@@ -32,18 +32,13 @@ body {
     align-items: center;
 }
 
-.paper + .paper {
+.paper ~ .paper {
     border-top: 1px solid #eee;
 }
 
 .paper.full-width {
     margin: 0;
     border-radius: 0;
-}
-
-.paper.dark {
-    background-color: hsl(0, 0%, 89%);
-    border: 1px solid #eee;
 }
 
 .paper .header {
@@ -56,8 +51,8 @@ body {
 
 .paper .header .date {
     border-radius: 10px;
-    background-color: hsl(0, 0%, 80%);
-    padding: 0.2em 0.5em;
+    background-color: hsl(4, 77%, 91%);
+    padding: 0.25em 0.75em;
     font-size: 0.8em;
     text-transform: uppercase;
 }
@@ -88,7 +83,7 @@ body {
 }
 
 .paper .link {
-    color: hsl(19, 94%, 39%);
+    color: hsl(4, 77%, 61%);
     text-decoration: none;
     /*display: block;*/
 }
@@ -97,31 +92,39 @@ body {
     content: attr(data-icon);
     text-transform: bold;
     font-size: 0.9;
-    color: hsl(19, 93%, 39%);
+    color: hsl(4, 77%, 61%);
 }
 
 .paper .details {
     font-size: 0.9em;
 }
 
+.show-more {
+    display: none;
+}
+
+.show-more-btn {
+    display: none;
+}
+
 
 /* NAVIGATION */
 .navigation {
     display: flex;
-    margin: 0 1em;
+    margin: 1em;
     color: hsl(0, 0%, 50%);
 }
 
 .navigation .item{
     display: inline-block;
-    padding: 1em 0.5em;
+    margin: 0 0.5em;
     font-weight: bold;
     font-size: 0.9em;
     border-bottom: 2px solid transparent;
 }
 
 .navigation .item:nth-of-type(1){
-    padding-left: 0;
+    margin-left: 0;
 }
 
 .navigation .item .link{
@@ -132,8 +135,8 @@ body {
 .navigation .item:hover, 
 .navigation .item.selected,
 .navigation .item:target{
-    color: hsl(0, 0%, 35%);
-    border-bottom: 2px solid #000;
+    color: hsl(4, 77%, 61%);
+    border-bottom: 2px solid hsl(4, 77%, 61%);
 }
 
 .navigation .right{
@@ -170,6 +173,37 @@ body {
     }
 }
 
+@media only screen and (max-width:720px){
+
+    .me {
+        border-bottom: 1px solid #eee;
+    }
+
+    .show-more-btn {
+        background-color: hsl( 0, 0%, 100%);
+        padding: 1em;
+        text-align: center;
+        display: block;
+        position: relative;
+    }
+
+    .show-more-btn::before{
+        content: attr(data-text-show);
+    }
+
+    .show-more:checked + .show-more-btn::before{
+        content: attr(data-text-less);
+    }
+
+    .show-more ~ .paper {
+        display: none;
+    }
+    .show-more:checked ~ .paper {
+        display: block;   
+    }
+
+}
+
 /* large */
 
 @media only screen and (min-width:720px){
@@ -180,5 +214,4 @@ body {
         margin: 0 1%;
         flex-basis: 50%;
     }
-
 }
