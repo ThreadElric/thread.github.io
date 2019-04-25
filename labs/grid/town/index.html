@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Town wall</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            background-color: #eee;
+            box-sizing: border-box;
+            font-family: 'Droid Sans', 'Roboto', sans-serif;
+        }
+
+        .town {
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            
+            min-height: 100vh;
+        }
+
+        .town * {
+            background-color: transparent;
+        }
+
+        .town__name {
+            color: #eee;
+            text-shadow: 1px 1px 2px #999;
+        }
+
+        .town--bilbao {
+            background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Bilbao_-_Guggenheim_aurore.jpg/2560px-Bilbao_-_Guggenheim_aurore.jpg");
+            background-size: cover;
+        }
+
+        .town__command {
+            margin-top: auto;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(4, minmax(1em, auto)); 
+            grid-gap: 0.5em;
+        }
+
+        .dashboard__item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0px 0px 5px hsla(0, 0%, 0%, 0.25); 
+        }
+
+        .dashboard__item.text {
+            padding: 1em;
+        }
+
+        .dashboard__item.photo {
+            background-color: #6C73DC;
+            color: #eee;
+            padding: 1em;
+            grid-row: 4; 
+            grid-column: 5;
+        }
+
+        .dashboard__weather {
+            background-color: #333;
+            color: #eee;  
+            grid-row: 3;
+            grid-column: 4;
+        }
+
+        .text--large {
+            font-size: 2em;
+            font-weight: normal;
+        }
+
+        .dashboard__image {
+            grid-row: 4;
+            grid-column: 4;
+            justify-self: end;
+            
+            position: relative;
+        }
+
+        .dashboard__image img {
+            width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+
+        .dashboard__image::after {
+            content: "";
+            position: absolute;
+            top:0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%)
+        }
+    </style>
+</head>
+<body>
+    <div class="town town--bilbao">
+            <header>
+                <h1 class="town__name text--large">Bilbao</h1>
+            </header>
+            <section class="town__command dashboard dashboard--bilbao">
+            <article class="dashboard__item text dashboard__weather">
+                <header class="text--large">
+            28°C
+                </header>
+                Cloudy
+            </article>
+            <article class="dashboard__item dashboard__image">
+            <img     src="https://static.routesonline.com/images/cached/newsarticle-278239-scaled-580x0.jpg"/>
+                </article>
+                <article class="dashboard__item photo">
+                <header class="text--large">4</header>
+                Photos
+                </article>
+            </section>
+    </div>
+</body>
+</html>
