@@ -1,0 +1,95 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: sans-serif;
+}
+
+body {
+	background-color : #eee;
+	color: #222;
+	font-size: 14px;
+}
+
+img {
+	width: 200px;
+	height: auto;
+}
+
+.main {
+	margin-top: -5em;
+}
+
+.header {
+	background-color : #fefefe;
+	padding: 2em 1em 5em;
+	border-radius: 0 0 8px 8px;
+}
+
+.header__logo {
+	font-size: 2em;
+	font-weight:400;
+}
+
+.header--inverted {
+	background-color: #aabbcc;
+	color: #fefefe;
+}
+
+.header__today {
+	margin-top: 1em;
+	font-size: 1.5em;
+	font-weight: normal;
+}
+
+.header--inverted .step__date {
+	color: #efefef;
+	font-weight: normal;
+}
+
+.step {
+	border-radius: 8px;
+	margin: 1em;
+	padding: 1em;
+	background-color: #fefefe;
+}
+
+.sub_header {
+	font-weight:normal;
+	text-decoration: italic;
+	font-size: 1.1em;
+	margin-left: 1em;
+}
+
+.step--break {
+	
+} 
+
+.step__date {
+	color: #999;
+	font-size: 1em;
+}
+
+.step__walk {
+	font-size: 1.2em;
+	line-height:1.5;
+}
+
+.step__walk .end::before{
+	content:" -> ";
+	font-size: 1.1em;
+	font-weight: bold;
+}
+
+.step--break .end::before {
+	display: none;
+}
+
+.step--current {
+	border-left: 4px solid hsl(0, 85%, 75%);
+}
+
+.step__footer {
+	text-align: right;
+}

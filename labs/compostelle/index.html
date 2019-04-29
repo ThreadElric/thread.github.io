@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Compostelle</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="assets/main.css">
+</head>
+<body>
+	<header class="header header--inverted">
+		<h1 class="header__logo">Compostelle</h1>
+		<main id="js-step-today">
+		
+		</main>
+	</header>
+	<main class="main">
+		<ul id="js-journey-list">
+		</ul>
+	</main>
+	
+	<template id="template-step">
+		<li>
+			<h2 class="sub_header"></h2>
+			<article class="step">
+				<header>
+					<h3 class="step__date"></h3>
+				</header>
+				<div class="step__walk">
+					<span class="start"></span>
+					<span class="end"></span>
+				</div>
+				<footer class="step__footer">
+					<span class="distance"></span>
+				</footer>
+			</article>
+		</li>
+	</template>
+	
+	<template id="template-step-today">
+		<div class="header__today">
+			<h2 class="step__date">Aujourd'hui</h2>
+			<main class="step__walk">
+				<span class="start"></span>
+				<span class="end"></span>
+			</main>
+			<span class="header__distance"></span>
+		</div>
+	</template>
+	
+	<script type="text/javascript" src="js/trajet.js"></script>
+</body>
+</html>
