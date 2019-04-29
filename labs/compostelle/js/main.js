@@ -1,24 +1,7 @@
-// utils
-function isSameDate(ref, value){
-	return (value.getTime() - ref.getTime()) === 0;
-}
-
-function isBefore(ref, value){
-	return (ref.getTime() - value.getTime()) < 0;
-}
-
-function isAfter(ref, value){
-	return (ref.getTime() - value.getTime()) > 0;
-}
-
-function isBetween(ref, start, end){
-	return (isAfter(ref, start) && isBefore(ref, end))
-		|| isSameDate(ref, start) 
-		|| isSameDate(ref, end)
-	; 
-}
-
-// models
+// imports
+define(function(require){
+	const DateUtils = require('./utils/DateUtils');
+	// models
 
 let journey = [];
 
@@ -398,7 +381,7 @@ Journey.prototype.getStepToday = function getStepToday(){
 		throw new Error("This object is not initialazed");
 	}
 	const result =  this.journey.find(function(step){
-		return isBetween(today, step.startDate, step.endDate);
+		return DateUtils.isBetween(today, step.startDate, step.endDate);
 	});
 	return result;
 }
@@ -486,7 +469,7 @@ StepList.prototype.init = function init(){
 		const startElement = stepInstance.querySelector('.start');
 		const endElement = stepInstance.querySelector('.end');
 	
-		let isToday = isBetween(today, step.startDate, step.endDate);
+		let isToday = DateUtils.isBetween(today, step.startDate, step.endDate);
 	
 		if(step.distance === undefined){
 			stepElement.classList.add('step--break');
@@ -537,3 +520,7 @@ StepToday.prototype.init = function init(){
 }
 
 new JourneyView(compostelle);
+});
+
+
+
