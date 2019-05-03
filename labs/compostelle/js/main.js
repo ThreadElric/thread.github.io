@@ -47,24 +47,24 @@ define(function(require){
 	journey.push({
 		start: "Coulombiers",
 		end: "Lusignan",
-		distance: 8,
+		distance: 11.5,
 	});
 
 	journey.push({
 		start: "Paris",
 		end: "Paris",
-		duration: 17,
+		duration: 19,
 	});
 
 	journey.push({
 		start: "Lusignan",
-		end:"Saint-Sauvant",
-		distance:12.6,
+		end:"Chenay",
+		distance: 21,
 	});
 
 	journey.push({
 		end:"Melle",
-		distance:35.5,
+		distance: 25,
 	});
 
 	journey.push({
@@ -79,7 +79,7 @@ define(function(require){
 
 	journey.push({
 		end:"Saint-Jean-d’Angély",
-		distance:23.4,
+		distance: 23.4,
 	});
 
 	journey.push({
@@ -113,15 +113,6 @@ define(function(require){
 	});
 
 	journey.push({
-		end: "Bordeaux",
-		distance : 16.7,
-	});
-
-	journey.push({
-		end: "Bordeaux",
-	});
-
-	journey.push({
 		end: "Gradignan",
 		distance : 15.7,
 	});
@@ -151,6 +142,241 @@ define(function(require){
 		distance : 25.1,
 	});
 
+	journey.push({
+		end: "Dax",
+		distance : 24.4,
+	});
+
+	journey.push({
+		end: "Peyrehorade",
+		distance : 24.4,
+	});
+
+	journey.push({
+		end: "Urt",
+		distance : 19.4,
+	});
+
+// camino del norte
+	journey.push({
+		end: "Bayonne",
+		distance : 20.1,
+	});
+
+	journey.push({
+		end: "Saint-Jean-de-Luz",
+		distance : 26.1,
+	});
+
+	journey.push({
+		end: "Irùn",
+		distance : 15.9,
+	});
+
+	journey.push({
+		end: "San Sebastian",
+		distance : 24.5,
+	});
+
+	journey.push({
+		end: "Zarautz",
+		distance : 22.3,
+	});
+
+	journey.push({
+		end: "Deba",
+		distance : 26,
+	});
+
+	journey.push({
+		end: "Markina",
+		distance : 22.8,
+	});
+
+	journey.push({
+		end: "Gernika",
+		distance : 25,
+	});
+
+	journey.push({
+		end: "Lezama",
+		distance : 21.3,
+	});
+
+	journey.push({
+		end: "Bilbao",
+		distance : 11.5,
+	});
+
+	journey.push({
+		end: "Portugalete",
+		distance : 19,
+	});
+
+	journey.push({
+		end: "Castro Urdiales",
+		distance : 25.7,
+	});
+
+	journey.push({
+		end: "Liendo-Hazas",
+		distance : 23,
+	});
+
+	journey.push({
+		end: "Santoña",
+		distance : 12.5,
+	});
+
+	journey.push({
+		end: "Guemes",
+		distance : 20.6,
+	});
+
+	journey.push({
+		end: "Santander",
+		distance : 11,
+	});
+
+	journey.push({
+		end: "Mogro",
+		distance : 24,
+	});
+
+	journey.push({
+		end: "Santillana del Mar",
+		distance : 26.1,
+	});
+
+	journey.push({
+		end: "Comillas",
+		distance : 24,
+	});
+
+	journey.push({
+		end: "Serdio",
+		distance : 21.2,
+	});
+
+	journey.push({
+		end: "Llanes",
+		distance : 33.2,
+	});
+
+	journey.push({
+		end: "Nueva",
+		distance : 18.6,
+	});
+
+	journey.push({
+		end: "Ribadesella",
+		distance : 13.5,
+	});
+
+	journey.push({
+		end: "La Isla",
+		distance : 18,
+	});
+
+	journey.push({
+		end: "Villaviciosa",
+		distance : 20.7,
+	});
+
+	journey.push({
+		end: "Gijon",
+		distance : 30,
+	});
+
+	journey.push({
+		end: "Aviles",
+		distance : 24,
+	});
+
+	journey.push({
+		end: "Muros de Nalon",
+		distance : 20.3,
+	});
+
+	journey.push({
+		end: "Soto de Luina",
+		distance : 16.5,
+	});	
+	
+	journey.push({
+		end: "Cadavedo",
+		distance : 23.5,
+	});
+
+	journey.push({
+		end: "Almuna",
+		distance : 16.6,
+	});
+
+	journey.push({
+		end: "La Caridad",
+		distance : 32,
+	});
+
+	journey.push({
+		end: "Ribadeo",
+		distance : 22,
+	});
+
+	journey.push({
+		end: "Lourenza",
+		distance : 28.8,
+	});
+
+	journey.push({
+		end: "Abadin",
+		distance : 27,
+	});
+
+	journey.push({
+		end: "Vilalba",
+		distance : 18.8,
+	});
+
+	journey.push({
+		end: "Baamonde",
+		distance : 20.6,
+	});
+
+	journey.push({
+		end: "Sabrado",
+		distance : 40.3,
+	});
+
+	journey.push({
+		end: "Arca o Pino",
+		distance : 36.6,
+	});
+
+	journey.push({
+		end: "Santiago",
+		distance : 20.1,
+	});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	// Camino frances
+	/*
 	journey.push({
 		end: "Dax",
 		distance : 24.4,
@@ -331,6 +557,7 @@ define(function(require){
 		distance : 25.3,
 	});
 
+	*/
 	journey.push({
 		end: "Negreira",
 		distance : 22.8,
