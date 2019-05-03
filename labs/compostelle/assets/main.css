@@ -49,7 +49,8 @@ img {
 }
 
 .step {
-	border-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
 	margin: 1em;
 	padding: 1em;
 	background-color: #fefefe;
@@ -87,8 +88,24 @@ img {
 }
 
 .step--current {
-	border-left: 4px solid hsl(0, 85%, 75%);
+	position: relative;
+	background-image: linear-gradient(
+		to right,
+		#fefefe,
+		transparent
+	);
 }
+
+.step--current::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 5px;
+	height: 100%;
+	background-color: hsl(0, 85%, 75%);
+}
+
 
 .step__footer {
 	text-align: right;
