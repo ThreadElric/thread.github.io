@@ -123,6 +123,11 @@ img {
 }
 
 @media print {
+
+	body {
+		display: block;
+	}
+
 	.header {
 		background: none;
 		color: #333;
@@ -134,5 +139,10 @@ img {
 
 	#js-journey-list li .sub_header {
 		display: none;
+	}
+
+	.main {
+		height: auto;
+		overflow-y: auto;
 	}
 }
