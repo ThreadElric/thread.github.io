@@ -53,7 +53,7 @@ define(function(require){
 	journey.push({
 		start: "Paris",
 		end: "Paris",
-		duration: 19,
+		duration: 20,
 	});
 
 	journey.push({
@@ -81,11 +81,27 @@ define(function(require){
 		end:"Saint-Jean-d’Angély",
 		distance: 23.4,
 	});
-
+	
 	journey.push({
 		end: "Saintes",
 		distance : 35.5,
 	});
+
+
+	/*
+
+	journey.push({
+		end:"Douhet",
+		distance: 21.5,
+	});
+
+
+	journey.push({
+		end: "Saintes",
+		distance : 14.5,
+	});
+
+	*/
 
 	journey.push({
 		end: "Pons",
@@ -112,9 +128,21 @@ define(function(require){
 		distance : 36.3,
 	});
 
+	/*
+	journey.push({
+		end: "Le Bouscat",
+		distance : 36.3,
+	});
+
+	journey.push({
+		end: "Le Bouscat",
+		distance : 36.3,
+	});
+	*/
+
 	journey.push({
 		end: "Gradignan",
-		distance : 15.7,
+		distance : 17.3,
 	});
 
 	journey.push({
@@ -157,7 +185,7 @@ define(function(require){
 		distance : 19.4,
 	});
 
-// camino del norte
+	// camino del norte
 	journey.push({
 		end: "Bayonne",
 		distance : 20.1,
