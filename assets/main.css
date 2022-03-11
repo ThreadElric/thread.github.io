@@ -14,8 +14,8 @@ html {
 /* body */
 
 body {
-    background-color: var(--grey-100-color);;
-    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--grey-100-color);
+    font-family: sans-serif;
     line-height: 1.55em;
     font-size: 16px;
 
@@ -192,7 +192,10 @@ body {
 }
 
 .main {
-    margin-bottom: 3em;
+    margin: 0 auto;
+    padding: 0 var(--padding-1);
+    width: 100%;
+    max-width: calc(var(--page-max-width) + var(--padding-1) * 2);
 }
 
 @media only screen and (max-width:480px){
