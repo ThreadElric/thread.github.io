@@ -124,7 +124,7 @@ body {
 .paper .link::before {
     content: attr(data-icon);
     text-transform: bold;
-    font-size: 0.9;
+    font-size: 0.9em;
     color: var(--red-300-color);
 }
 
