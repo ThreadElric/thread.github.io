@@ -15,7 +15,7 @@ html {
 
 body {
   font-family: sans-serif;
-  line-height: 1.55em;
+  line-height: 1.55;
   font-size: 16px;
 }
 
@@ -23,6 +23,9 @@ h1,
 h2,
 h3 {
   color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: normal;
+  text-decoration: none;
 }
 
 /* lists */
@@ -59,12 +62,34 @@ ul > li::before {
   background-color: hsl(210, 25%, 98%);
 }
 
+/* TEXTS */
+
 .text-primary {
   color: var(--text-primary);
 }
 
 .text-secondary {
   color: var(--text-secondary);
+}
+
+.text-title {
+  font-size: var(--text-title);
+  font-weight: bold;
+}
+
+.text-subtitle {
+  font-size: var(--text-subtitle);
+  font-weight: normal;
+}
+
+.text-body {
+  font-size: var(--text-body);
+  font-weight: normal;
+}
+
+.text-small {
+  font-size: var(--text-small);
+  font-weight: normal;
 }
 
 /* images */
@@ -80,26 +105,38 @@ picture {
 .row {
   display: flex;
   flex-direction: row;
-  gap: var(--padding-1);
+  gap: var(--spacing-1);
+}
+
+.grid-2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--spacing-1-5);
+}
+
+.grid-2 > * {
+  flex-grow: 1;
+  flex-basis: 350px;
 }
 
 .page {
   margin: 0 auto;
-  padding: 0 var(--padding-1);
+  padding: 0 var(--spacing-1);
   max-width: var(--page-max-width);
   box-sizing: content-box;
 }
 
 .box {
-  padding: var(--padding-1);
+  padding: var(--spacing-1);
 }
 
 .vstack > * + * {
-  margin-top: var(--padding-1);
+  margin-block-start: var(--spacing-1);
 }
 
 .vstack[data-stack-variant="large"] > * + * {
-  margin-top: var(--padding-1-5);
+  margin-block-start: var(--spacing-1-5);
 }
 
 a {
@@ -111,7 +148,7 @@ a {
 a[href^="https://"]::after {
   content: "\2794";
   display: inherit;
-  margin-inline-start: var(--padding-0-5);
+  margin-inline-start: var(--spacing-0-5);
   font-size: 0.9em;
   color: var(--text-secondary);
   transition: transform 300ms ease-in;
@@ -137,8 +174,8 @@ a[href^="https://"]::after {
 .profile {
   display: flex;
   align-items: center;
-  margin-block: var(--padding-1-5);
-  gap: var(--padding-1);
+  margin-block: var(--spacing-1-5);
+  gap: var(--spacing-1);
 }
 
 .profile img {
@@ -149,7 +186,10 @@ a[href^="https://"]::after {
   border-radius: var(--border-radius-normal);
 }
 
-
 .profile > .profile__inner {
+  line-height: 1.5;
+}
 
+.profile > .profile__inner > a {
+  margin-top: var(--spacing-0-5);
 }

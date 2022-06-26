@@ -8,9 +8,10 @@
   <style>
     :root {
       --page-max-width: 1024px;
-      --padding-0-5: 0.5rem;
-      --padding-1: 1rem;
-      --padding-1-5: 1.5rem;
+
+      --spacing-0-5: 0.5rem;
+      --spacing-1: 1rem;
+      --spacing-1-5: 1.5rem;
 
       /* 210, 25%, 73% */
       --brand-hue: 210;
@@ -21,6 +22,11 @@
 
       --text-primary: hsl(210 25% 10%);
       --text-secondary: hsl(210 25% 30%);
+
+      --text-title: 1.25rem;
+      --text-subtitle: 1.10rem;
+      --text-body: 1rem;
+      --text-small: 0.95rem;
 
       --surface-0-dp: hsl(var(--brand-hue) 25% 90%);
       --surface-2-dp: hsl(var(--brand-hue) 20% 70%);
@@ -38,41 +44,37 @@
 </head>
 
 <body class="[ vstack ][ surface-0-dp ]" data-stack-variant="large">
-  <header>
-    <div class="[ profile ] [ page ]">
-      <img alt="" src="assets/me@mobile.jpg" data-placeholder="A" />
-      <div class="[ text-secondary ]">
-        <h1>Fred</h1>
-        Dev
-        <p>Café, running et café.</p>
+  <header class="[ page ]">
+    <div class="[ profile ]">
+      <img alt="" src="assets/me@mobile.jpg" data-placeholder="F" />
+      <div class="[ profile__inner ] [ text-secondary text-body ]">
+        <h1 class="[ text-primary text-title ]">Fred</h1>
+        <h2 class="[ text-secondary ]">Dev</h2>
+        <p class="[ text-secondary text-body ]">Café, running et café.</p>
         <a href="https://github.com/ThreadElric">threadelric</a>
       </div>
     </div>
   </header>
-  <main class="[ summary ] [ page box tile vstack ] [ surface-6-dp ]">
-    <section>
-      <h2 class="[ text-primary ]">
+  <main class="[ page grid-2 ]">
+    <section class="[ box tile ]">
+      <h2 class="[ text-primary text-title ] [ row ]">
         Dev Front Web<span class="[ text-secondary ]">leboncoin</span>
       </h2>
-      <h3 class="[ text-secondary ]">
-        2019-2021
-      </h3>
-      <div>
-        Développement du parcours d'achat et de livraison des annonces "bien de consommation"
+      <h3 class="[ text-secondary text-small ]">2019-2022</h3>
+      <div class="[ text-body ]">
+        Développement du parcours d'achat et de livraison des annonces "biens de consommation"
         <ul>
           <li>Gestion de la page d'achat et d'acceptation d'une offre</li>
           <li>Tests cypress</li>
         </ul>
       </div>
     </section>
-    <section>
-      <h2>
+    <section class="[ box tile ]">
+      <h2 class="[ text-primary text-title ] [ row ]">
         Dev FullStack<span class="[ text-secondary ]">Withings</span>
       </h2>
-      <h3 class="[ text-secondary ]">
-        2017-2019
-      </h3>
-      <div>
+      <h3 class="[ text-secondary text-small ]">2017-2019</h3>
+      <div class="[ text-body ]">
         Migration de l'outil interne en PHP/Slim vers une architecture full JS
         <ul>
           <li>Ajouts fonctionnels des interfaces existantes (PHP, Backbone/Marionnette)</li>
@@ -81,12 +83,12 @@
         </ul>
       </div>
     </section>
-    <section>
-      <h2>
+    <section class="[ box tile ]">
+      <h2 class="[ text-primary text-title ] [ row ]">
         Dev FullStack<span class="[ text-secondary ]">Pertimm</span>
       </h2>
-      <h3 class="[ text-secondary ]">2013-2016</h3>
-      <div>
+      <h3 class="[ text-secondary text-small ]">2013-2016</h3>
+      <div class="[ text-body ]">
         Evolutions fonctionnelles du back-office pour un moteur de recherche e-Commerce et customisations
         client.
         <div>
@@ -101,37 +103,16 @@
         </div>
       </div>
     </section>
-    <section>
-      <h2>
+    <section class="[ box tile ]">
+      <h2 class="[ text-primary text-title ] [ row ]">
         Dev FullStack<span class="[ text-secondary ]">ILObjects</span>
       </h2>
-      <h3 class="[ text-secondary ]">2007-2013</h3>
-      <div>
-        Développement d&apos;un site e-Commerce : librairie en ligne
+      <h3 class="[ text-secondary text-small ]">2007-2013</h3>
+      <div class="[ text-body ]">
+        Développement d'un site e-Commerce : librairie en ligne
         Spécifications des interfaces web et mobile dédiées à la recherche dans
         un catalogue de livres numérique.
       </div>
-    </section>
-
-    <section>
-      <h2>Langues</h2>
-      <p>
-      <dl>
-        <dt>Français</dt>
-        <dd>Langue maternelle</dd>
-        <dt>Anglais</dt>
-        <dd>Oral et écrit technique</dd>
-      </dl>
-      </p>
-    </section>
-    <section>
-      <h2>Informations diverses</h2>
-      <dl>
-        <dt>Permis de conduire</dt>
-        <dd>Permis B</dd>
-        <dt>Loisirs</dt>
-        <dd>Blender, Course à pied</dd>
-      </dl>
     </section>
   </main>
 </body>
