@@ -2,152 +2,138 @@
 <html lang="fr">
 
 <head>
-	<title>ThreadElric's page</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<style>
-		:root {
-			--page-max-width: 1024px;
-			--padding-0-5: 0.5rem;
-			--padding-1: 1rem;
-			--padding-1-5: 1.5rem;
+  <title>ThreadElric's page</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --page-max-width: 1024px;
+      --padding-0-5: 0.5rem;
+      --padding-1: 1rem;
+      --padding-1-5: 1.5rem;
 
-			/* COLORS */
-			--red-100-color: hsl(360, 100%, 91%);
-			--red-200-color: hsl(360, 82%, 89%);
-			--red-300-color: hsl(360, 77%, 78%);
-			--red-400-color: hsl(360, 71%, 66%);
-			--red-500-color: hsl(356, 64%, 55%);
-			--red-600-color: hsl(354, 67%, 44%);
-			--red-700-color: hsl(352, 72%, 38%);
-			--red-800-color: hsl(350, 79%, 28%);
-			--red-900-color: hsl(348, 94%, 20%);
+      /* 210, 25%, 73% */
+      --brand-hue: 210;
+      --brand-saturation: 25%;
+      --brand-light: 73%;
 
-			--grey-900-color: hsl(0, 0%, 13%);
-			--grey-800-color: hsl(0, 0%, 23%);
-			--grey-700-color: hsl(0, 0%, 32%);
-			--grey-600-color: hsl(0, 0%, 38%);
-			--grey-500-color: hsl(0, 0%, 49%);
-			--grey-400-color: hsl(0, 0%, 62%);
-			--grey-300-color: hsl(0, 0%, 69%);
-			--grey-200-color: hsl(0, 0%, 81%);
-			--grey-100-color: hsl(0, 0%, 88%);
-		}
-	</style>
-	<link href="./assets/main.css" rel="stylesheet" />
+      --brand: hsl(var(--brand-hue) var(--brand-saturation) var(--brand-light));
+
+      --text-primary: hsl(210 25% 10%);
+      --text-secondary: hsl(210 25% 30%);
+
+      --surface-0-dp: hsl(var(--brand-hue) 25% 90%);
+      --surface-2-dp: hsl(var(--brand-hue) 20% 70%);
+      --surface-4-dp: hsl(var(--brand-hue) 20% 70%);
+      --surface-6-dp: hsl(var(--brand-hue) 42% 98%);
+
+      --box-shadow-1: 0 8px 48px hsl(0, 0%, 93%);
+      --box-shadow-2: 0 4px 8px hsl(210, 7%, 28%, 0.06);
+      --box-shadow-3: 0 0 1px hsl(210, 7%, 28%, 0.36);
+
+      --border-radius-normal: 8px;
+    }
+  </style>
+  <link href="./assets/main.css" rel="stylesheet" />
 </head>
 
-<body>
-	<main>
+<body class="[ vstack ][ surface-0-dp ]" data-stack-variant="large">
+  <header>
+    <div class="[ profile ] [ page ]">
+      <img alt="" src="assets/me@mobile.jpg" data-placeholder="A" />
+      <div class="[ text-secondary ]">
+        <h1>Fred</h1>
+        Dev
+        <p>Café, running et café.</p>
+        <a href="https://github.com/ThreadElric">threadelric</a>
+      </div>
+    </div>
+  </header>
+  <main class="[ summary ] [ page box tile vstack ] [ surface-6-dp ]">
+    <section>
+      <h2 class="[ text-primary ]">
+        Dev Front Web<span class="[ text-secondary ]">leboncoin</span>
+      </h2>
+      <h3 class="[ text-secondary ]">
+        2019-2021
+      </h3>
+      <div>
+        Développement du parcours d'achat et de livraison des annonces "bien de consommation"
+        <ul>
+          <li>Gestion de la page d'achat et d'acceptation d'une offre</li>
+          <li>Tests cypress</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h2>
+        Dev FullStack<span class="[ text-secondary ]">Withings</span>
+      </h2>
+      <h3 class="[ text-secondary ]">
+        2017-2019
+      </h3>
+      <div>
+        Migration de l'outil interne en PHP/Slim vers une architecture full JS
+        <ul>
+          <li>Ajouts fonctionnels des interfaces existantes (PHP, Backbone/Marionnette)</li>
+          <li>Nouvelle architecture JS avec React/Redux pour le front-end et la gestion de
+            l'état de l'application. Webpack pour l'asset pipeline</li>
+        </ul>
+      </div>
+    </section>
+    <section>
+      <h2>
+        Dev FullStack<span class="[ text-secondary ]">Pertimm</span>
+      </h2>
+      <h3 class="[ text-secondary ]">2013-2016</h3>
+      <div>
+        Evolutions fonctionnelles du back-office pour un moteur de recherche e-Commerce et customisations
+        client.
+        <div>
+          <ul>
+            <li>Constitution ou amélioration des interfaces du back-office et des
+              démonstrateurs (PHP, Ruby on
+              Rails)</li>
+            <li>Simplification des procédures de livraison et de la solution (Ruby, Bash,
+              Jenkins, Docker)</li>
+          </ul>
+          Intégration dans une organisation SCRUM avec itérations de deux semaines.
+        </div>
+      </div>
+    </section>
+    <section>
+      <h2>
+        Dev FullStack<span class="[ text-secondary ]">ILObjects</span>
+      </h2>
+      <h3 class="[ text-secondary ]">2007-2013</h3>
+      <div>
+        Développement d&apos;un site e-Commerce : librairie en ligne
+        Spécifications des interfaces web et mobile dédiées à la recherche dans
+        un catalogue de livres numérique.
+      </div>
+    </section>
 
-		<section>
-			<img alt="" src="assets/me@mobile.jpg" data-placeholder="A" />
-			<div>
-				<h1>Fred</h1>
-				Développeur FullStack
-				<p>Café, running et café.</p>
-				<a href="https://github.com/ThreadElric">threadelric</a>
-			</div>
-		</section>
-
-		<section>
-			<h2>
-				leboncoin <span>2019-2021</span>
-			</h2>
-			<p>
-				Dev Front web
-			</p>
-			<div>
-				Développement du parcours d'achat et de livraison des annonces "bien de consommation"
-				<div>
-					<u>Réalisations :</u>
-					<ul>
-						<li>Gestion de la page d'achat et d'acceptation d'une offre</li>
-						<li>Tests cypress</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-		<section>
-			<h2>
-				Withings <span>2017-2019</span>
-			</h2>
-			<p>
-				Dev FullStack
-			</p>
-			<div>
-				Migration de l'outil interne en PHP/Slim vers une architecture full JS
-				<div>
-					<u>R&eacute;alisations :</u>
-					<ul>
-						<li>Ajouts fonctionnels des interfaces existantes (PHP, Backbone/Marionnette)</li>
-						<li>Nouvelle architecture JS avec React/Redux pour le front-end et la gestion de
-							l'état de l'application. Webpack pour l'asset pipeline</li>
-					</ul>
-				</div>
-			</div>
-		</section>
-		<section>
-			<h2>
-				Pertimm <span>2013-2016</span>
-			</h2>
-			<p>
-				Dev FullStack
-			</p>
-			<div>
-				Evolutions fonctionnelles du back-office pour un moteur de recherche e-Commerce et customisations
-				client.
-				<div>
-					<u>Réalisations</u>:
-					<ul>
-						<li>Constitution ou amélioration des interfaces du back-office et des
-							démonstrateurs (PHP, Ruby on
-							Rails)</li>
-						<li>Simplification des procédures de livraison et de la solution (Ruby, Bash,
-							Jenkins, Docker)</li>
-					</ul>
-					Intégration dans une organisation SCRUM avec itérations de deux semaines.
-				</div>
-			</div>
-		</section>
-		<section>
-			<h2>
-				ILObjects <span>2007-2013</span>
-			</h2>
-			<p>
-				Dev FullStack
-			</p>
-			<div>
-				Développement d&apos;un site e-Commerce : librairie en ligne
-				Spécifications des interfaces web et mobile dédiées à la recherche dans
-				un catalogue de livres numérique.
-			</div>
-		</section>
-
-		<section>
-			<h2>Langues</h2>
-			<p>
-			<dl>
-				<dt>Français</dt>
-				<dd>Langue maternelle</dd>
-				<dt>Anglais</dt>
-				<dd>Oral et écrit technique</dd>
-			</dl>
-			</p>
-		</section>
-		<section>
-			<h2>Informations diverses</h2>
-			<p>
-			<dl>
-				<dt>Permis de conduire</dt>
-				<dd>Permis B</dd>
-				<dt>Loisirs</dt>
-				<dd>Blender, Course à pied</dd>
-			</dl>
-			</p>
-		</section>
-
-	</main>
+    <section>
+      <h2>Langues</h2>
+      <p>
+      <dl>
+        <dt>Français</dt>
+        <dd>Langue maternelle</dd>
+        <dt>Anglais</dt>
+        <dd>Oral et écrit technique</dd>
+      </dl>
+      </p>
+    </section>
+    <section>
+      <h2>Informations diverses</h2>
+      <dl>
+        <dt>Permis de conduire</dt>
+        <dd>Permis B</dd>
+        <dt>Loisirs</dt>
+        <dd>Blender, Course à pied</dd>
+      </dl>
+    </section>
+  </main>
 </body>
 
 </html>
