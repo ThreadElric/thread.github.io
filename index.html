@@ -60,12 +60,13 @@
       <h2 class="[ text-primary text-title ] [ row ]">
         Dev Front Web<span class="[ text-secondary ]">leboncoin</span>
       </h2>
-      <h3 class="[ text-secondary text-small ]">2019-2022</h3>
+      <h3 class="[ text-secondary text-small ]">2019-<span id="now"></span></h3>
       <div class="[ text-body ]">
-        Développement du parcours d'achat et de livraison des annonces "biens de consommation"
+        Développement du parcours d'achat d'article et d'options de visibilité pour les annonces
         <ul>
-          <li>Gestion de la page d'achat et d'acceptation d'une offre</li>
-          <li>Tests cypress</li>
+          <li>Gestion de la page d'achat</li>
+          <li>Page de souscription aux options</li>
+          <li>React/Typescript/Tailwind</li>
         </ul>
       </div>
     </section>
@@ -115,6 +116,11 @@
       </div>
     </section>
   </main>
+  <script>
+    const nowElement = document.getElementById('now')
+    const year = new Date().getFullYear()
+    nowElement.innerText= year
+  </script>
 </body>
 
 </html>
